@@ -6,13 +6,13 @@ Clone this repo, then
 ```bash
 npm i
 ```
-To run Tauri in dev-mode:
+Run Tauri in dev-mode:
 ```bash
 npm run tauri dev
 ```
 Keep in mind, that this will delete a previous built release.
 
-To build:
+Build:
 ```bash
 npm run tauri build
 ```
