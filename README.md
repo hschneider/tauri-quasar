@@ -1,4 +1,4 @@
-# Tauri2 Quasar Starter App
+# Tauri2 Vue Quasar Starter App
 This is a starter app scaffold for **Tauri2** with **Quasar** and **Vue3**.
 
 Clone this repo, then
