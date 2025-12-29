@@ -16,4 +16,8 @@ To build:
 ```bash
 npm run tauri build
 ```
+![](https://marketmix.com/git-assets/tauri-quasar/tauri2-quasar-template.jpg)
+
+![](https://marketmix.com/git-assets/tauri-quasar/tauri2-quasar-template-2.jpg)
+
 Star this repo, if you like it :-)
