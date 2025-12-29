@@ -12,6 +12,28 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
+
+        <q-item clickable v-ripple to="/" exact>
+          <q-item-section avatar>
+            <q-icon name="home" />
+          </q-item-section>
+          <q-item-section>
+            Home
+            <q-item-label caption>Main page</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple to="/test" exact>
+          <q-item-section avatar>
+            <q-icon name="link" />
+          </q-item-section>
+          <q-item-section>
+            Test
+            <q-item-label caption>A local test page</q-item-label>
+          </q-item-section>
+
+        </q-item>
+
         <q-item-label header> Essential Links </q-item-label>
 
         <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />

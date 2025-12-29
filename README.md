@@ -1,43 +1,19 @@
-# Quasar App (quasar)
+# Tauri2 Quasar Starter App
+This is a starter app scaffold for **Tauri2** with **Quasar** and **Vue3**.
 
-A Quasar Project
-
-## Install the dependencies
-
-```bash
-yarn
-# or
-npm install
-```
-
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+Clone this repo, then
 
 ```bash
-quasar dev
+npm i
 ```
-
-### Lint the files
-
+To run Tauri in dev-mode:
 ```bash
-yarn lint
-# or
-npm run lint
+npm run tauri dev
 ```
+Keep in mind, that this will delete a previous built release.
 
-### Format the files
-
+To build:
 ```bash
-yarn format
-# or
-npm run format
+npm run tauri build
 ```
-
-### Build the app for production
-
-```bash
-quasar build
-```
-
-### Customize the configuration
-
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+Star this repo, if you like it :-)
