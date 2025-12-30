@@ -16,6 +16,12 @@ Build:
 ```bash
 npm run tauri build
 ```
+
+Clean all build-targets:
+```bash
+npm run clean
+```
+
 ![](https://marketmix.com/git-assets/tauri-quasar/tauri2-quasar-template.jpg)
 
 ![](https://marketmix.com/git-assets/tauri-quasar/tauri2-quasar-template-2.jpg)
