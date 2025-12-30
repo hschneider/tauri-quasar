@@ -1,24 +1,62 @@
 <template>
+
   <div class="q-pa-md">
+    <!-- Search Box -->
+    <div class="row justify-start q-mb-md">
+      <q-input
+        v-model="searchQuery"
+        outlined
+        dense
+        placeholder="Search treats by name, calories, fat, carbs, protein..."
+        style="width: 400px"
+      >
+        <template v-slot:prepend>
+          <q-icon name="search" />
+        </template>
+        <template v-slot:append v-if="searchQuery">
+          <q-icon name="close" @click="searchQuery = ''" class="cursor-pointer" />
+        </template>
+      </q-input>
+    </div>
+
+    <!-- Table -->
     <q-table
-      title="Treats"
-      :rows="rows"
+      title=""
+      :rows="filteredRows"
       :columns="columns"
       row-key="name"
-    />
+      flat
+      bordered
+      separator="cell"
+      class="table-striped"
+    >
+      <!-- Empty State -->
+      <template v-slot:no-data>
+        <div class="full-width row flex-center q-pa-lg">
+          <div class="text-center">
+            <q-icon name="search_off" size="48px" color="grey-5" class="q-mb-md" />
+            <p class="text-grey">No treats found matching "{{ searchQuery }}"</p>
+          </div>
+        </div>
+      </template>
+    </q-table>
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, computed } from 'vue'
+
+const searchQuery = ref('')
+
 const columns = [
   {
     name: 'name',
     required: true,
     label: 'Dessert (100g serving)',
     align: 'left',
-    field: row => row.name,
-    format: val => `${val}`,
-    sortable: true
+    field: (row) => row.name,
+    format: (val) => `${val}`,
+    sortable: true,
   },
   { name: 'calories', align: 'center', label: 'Calories', field: 'calories', sortable: true },
   { name: 'fat', label: 'Fat (g)', field: 'fat', sortable: true },
@@ -35,7 +73,7 @@ const rows = [
     protein: 4.0,
     sodium: 87,
     calcium: '14%',
-    iron: '1%'
+    iron: '1%',
   },
   {
     name: 'Ice cream sandwich',
@@ -45,7 +83,7 @@ const rows = [
     protein: 4.3,
     sodium: 129,
     calcium: '8%',
-    iron: '1%'
+    iron: '1%',
   },
   {
     name: 'Eclair',
@@ -55,7 +93,7 @@ const rows = [
     protein: 6.0,
     sodium: 337,
     calcium: '6%',
-    iron: '7%'
+    iron: '7%',
   },
   {
     name: 'Cupcake',
@@ -65,7 +103,7 @@ const rows = [
     protein: 4.3,
     sodium: 413,
     calcium: '3%',
-    iron: '8%'
+    iron: '8%',
   },
   {
     name: 'Gingerbread',
@@ -75,7 +113,7 @@ const rows = [
     protein: 3.9,
     sodium: 327,
     calcium: '7%',
-    iron: '16%'
+    iron: '16%',
   },
   {
     name: 'Jelly bean',
@@ -85,7 +123,7 @@ const rows = [
     protein: 0.0,
     sodium: 50,
     calcium: '0%',
-    iron: '0%'
+    iron: '0%',
   },
   {
     name: 'Lollipop',
@@ -95,7 +133,7 @@ const rows = [
     protein: 0,
     sodium: 38,
     calcium: '0%',
-    iron: '2%'
+    iron: '2%',
   },
   {
     name: 'Honeycomb',
@@ -105,7 +143,7 @@ const rows = [
     protein: 6.5,
     sodium: 562,
     calcium: '0%',
-    iron: '45%'
+    iron: '45%',
   },
   {
     name: 'Donut',
@@ -115,7 +153,7 @@ const rows = [
     protein: 4.9,
     sodium: 326,
     calcium: '2%',
-    iron: '22%'
+    iron: '22%',
   },
   {
     name: 'KitKat',
@@ -125,16 +163,30 @@ const rows = [
     protein: 7,
     sodium: 54,
     calcium: '12%',
-    iron: '6%'
-  }
+    iron: '6%',
+  },
 ]
 
-export default {
-  setup () {
-    return {
-      columns,
-      rows
-    }
+// Filter rows based on search query
+const filteredRows = computed(() => {
+  if (!searchQuery.value.trim()) {
+    return rows
   }
-}
+
+  const query = searchQuery.value.toLowerCase()
+
+  return rows.filter((row) =>
+    columns.some((col) => {
+      const fieldValue =
+        typeof col.field === 'function' ? col.field(row) : row[col.field || col.name]
+      return fieldValue && String(fieldValue).toLowerCase().includes(query)
+    }),
+  )
+})
 </script>
+
+<style scoped>
+.table-striped :deep(tbody tr:nth-child(odd)) {
+  background-color: #f5f5f5;
+}
+</style>
