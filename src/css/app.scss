@@ -52,10 +52,10 @@ p {
   font-size: 16px;
 }
 
+.q-item__section--avatar {
+  min-width: unset;
+}
 .q-item__section--side {
-  .q-item__section--avatar {
-    min-width: unset;
-  }
   .q-icon {
     margin-top: -15px !important;
   }
