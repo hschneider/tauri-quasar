@@ -17,7 +17,7 @@ Build:
 npm run tauri build
 ```
 
-Clean all build-targets:
+Clean all targets (build and debug):
 ```bash
 npm run clean
 ```
