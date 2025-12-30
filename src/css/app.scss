@@ -1,4 +1,9 @@
 // app global css in SCSS form
+
+// -----------------------------------------
+// -- HTML Tags
+// -----------------------------------------
+//
 body {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -39,6 +44,10 @@ p {
   margin-bottom: 10px;
 }
 
+// -----------------------------------------
+// -- Title- and Sidebar
+// -----------------------------------------
+//
 .q-toolbar__title {
   font-size: 16px;
 }
