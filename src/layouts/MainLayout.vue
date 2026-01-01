@@ -33,10 +33,11 @@
           </q-item-section>
 
         </q-item>
-
+        <!--
         <q-item-label header> Essential Links </q-item-label>
 
         <EssentialLink v-for="link in linksList" :key="link.title" v-bind="link" />
+        -->
       </q-list>
     </q-drawer>
 
@@ -48,6 +49,8 @@
 
 <script setup>
 import { ref } from 'vue'
+
+/*
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
@@ -94,7 +97,7 @@ const linksList = [
     link: 'https://awesome.quasar.dev',
   },
 ]
-
+*/
 const leftDrawerOpen = ref(false)
 
 function toggleLeftDrawer() {
