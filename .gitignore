@@ -31,3 +31,5 @@ yarn-error.log*
 
 # local .env files
 .env.local*
+src/css/app.css.sync-conflict-20251230-185835-MQLAJ2T.map
+src/css/app.sync-conflict-20251230-185845-MQLAJ2T.css

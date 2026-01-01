@@ -50,7 +50,7 @@
 <script setup>
 import { ref } from 'vue'
 
-/*
+/* 
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
