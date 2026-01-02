@@ -8,7 +8,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered width="200">
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered width="250">
       <q-list>
         <q-item clickable v-ripple to="/" exact>
           <q-item-section avatar>
