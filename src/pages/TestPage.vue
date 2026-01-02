@@ -8,18 +8,6 @@
 
     <TestTable style="margin: 15px -15px 15px -15px"/>
 
-    <q-card dark bordered class="bg-grey-3" style="color: #333; max-width: 300px">
-      <q-card-section>
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-separator inset />
-
-      <q-card-section>
-        {{ lorem }}
-      </q-card-section>
-    </q-card>
   </q-page>
 </template>
 
