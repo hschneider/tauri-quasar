@@ -4,7 +4,7 @@
     <h2>Subheadline</h2>
     <p>{{ lorem }}</p>
     <p>{{ lorem }}</p>
-    <q-btn class="btn-md" label="Ping the Rust-Backend" color="primary" @click="CallBackend" unelevated/>
+    <q-btn class="btn-md btn-black" label="Ping the Rust-Backend" color="primary" @click="CallBackend" unelevated/>
 
     <TestTable style="margin: 15px -15px 15px -15px"/>
 

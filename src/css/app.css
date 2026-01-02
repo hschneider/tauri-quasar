@@ -53,6 +53,24 @@ p {
   margin-top: -15px !important;
 }
 
+.tb-compact {
+  min-height: unset;
+}
+
+.tb-white {
+  background: white;
+  color: #333;
+}
+
+.tb-gray {
+  background: rgb(245, 245, 245);
+  color: #333;
+}
+
+.btn-black {
+  background: #333 !important;
+}
+
 .btn-sm {
   font-size: 10px;
   padding: 0 8px 0 8px;

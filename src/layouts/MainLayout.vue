@@ -1,14 +1,14 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+    <q-header>
+      <q-toolbar class="tb-gray tb-compact">
+        <q-btn flat dense round icon="menu" aria-label="Menu"  @click="toggleLeftDrawer" />
         <q-toolbar-title></q-toolbar-title>
-        <div>v{{ $q.version }}</div>
+        <div style="padding-right: 10px">v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered width="200">
       <q-list>
         <q-item clickable v-ripple to="/" exact>
           <q-item-section avatar>
