@@ -3,16 +3,13 @@
     <q-header elevated>
       <q-toolbar>
         <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
-
-        <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title></q-toolbar-title>
+        <div>v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-
         <q-item clickable v-ripple to="/" exact>
           <q-item-section avatar>
             <q-icon name="home" />
@@ -31,7 +28,6 @@
             Test
             <q-item-label caption>A local test page</q-item-label>
           </q-item-section>
-
         </q-item>
         <!--
         <q-item-label header> Essential Links </q-item-label>
@@ -50,14 +46,13 @@
 <script setup>
 import { ref } from 'vue'
 
-/* 
+/*
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
     title: 'Docs',
     caption: 'quasar.dev',
-    icon: 'school',
     link: 'https://quasar.dev',
   },
   {

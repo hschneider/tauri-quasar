@@ -4,7 +4,7 @@ use tauri::Manager;
 
 #[tauri::command]
 fn ping() -> String {
-    format!("PONG from the Rust Backend!")
+    format!("PONG from the Rust-Backend!")
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
