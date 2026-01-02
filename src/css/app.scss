@@ -60,3 +60,18 @@ p {
     margin-top: -15px !important;
   }
 }
+
+// -----------------------------------------
+// -- Custom
+// -----------------------------------------
+//
+.btn-sm {
+  font-size: 10px;
+  padding: 0 8px 0 8px;
+  min-height: 20px;
+}
+.btn-md {
+  font-size: 12px;
+  padding: 0 10px 0 10px;
+  min-height: 28px;
+}
