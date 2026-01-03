@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "quasar",
+  "productName": "Quasar",
   "version": "0.1.0",
   "identifier": "com.marketmix.quasar",
   "build": {

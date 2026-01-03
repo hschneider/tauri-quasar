@@ -2,9 +2,10 @@
   <q-layout view="lHh Lpr lFf">
     <q-header>
       <q-toolbar class="tb-gray tb-compact">
-        <q-btn flat dense round icon="menu" aria-label="Menu"  @click="toggleLeftDrawer" />
+        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
         <q-toolbar-title></q-toolbar-title>
         <div style="padding-right: 10px">v{{ $q.version }}</div>
+        <q-btn flat dense round icon="add" aria-label="Menu" @click="cloneWindow" />
       </q-toolbar>
     </q-header>
 
@@ -45,7 +46,8 @@
 
 <script setup>
 import { ref } from 'vue'
-
+import { invoke } from '@tauri-apps/api/core'
+import { getCurrentWindow } from '@tauri-apps/api/window'
 /*
 import EssentialLink from 'components/EssentialLink.vue'
 
@@ -98,4 +100,19 @@ const leftDrawerOpen = ref(false)
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value
 }
+
+async function cloneWindow() {
+  const url = window.location.hash // Quasar route
+  const appWindow = getCurrentWindow()
+  const pos = await appWindow.outerPosition()
+
+  await invoke('clone_window', {
+    width: 1024,
+    height: 800,
+    x: pos.x,
+    y: pos.y,
+    url,
+  })
+}
+
 </script>
