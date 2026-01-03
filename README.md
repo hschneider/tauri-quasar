@@ -33,6 +33,10 @@ Clean all targets (build and debug):
 npm run clean
 ```
 
-![](https://marketmix.com/git-assets/tauri-quasar/tauri2-quasar-template.jpg)
+![](https://marketmix.com/git-assets/tauri-quasar/tauri2-vue-quasar-1.jpg)
 
-![](https://marketmix.com/git-assets/tauri-quasar/tauri2-quasar-template-2.jpg)
+![](https://marketmix.com/git-assets/tauri-quasar/tauri2-vue-quasar-2.jpg)
+
+![](https://marketmix.com/git-assets/tauri-quasar/tauri2-vue-quasar-3.jpg)
+
+![](https://marketmix.com/git-assets/tauri-quasar/tauri2-vue-quasar-4.jpg)
