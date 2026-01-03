@@ -22,11 +22,11 @@
 
         <q-item clickable v-ripple to="/test" exact>
           <q-item-section avatar>
-            <q-icon name="link" />
+            <q-icon name="receipt" />
           </q-item-section>
           <q-item-section>
             Test
-            <q-item-label caption>A local test page</q-item-label>
+            <q-item-label caption>A test page</q-item-label>
           </q-item-section>
         </q-item>
         <!--
